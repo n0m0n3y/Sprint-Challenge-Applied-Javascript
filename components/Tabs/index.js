@@ -7,7 +7,7 @@
 //
 //  The tab component should look like this:
 //    <div class="tab">topic here</div>
-const tabs = document.querySelector('.topics');
+const topics = document.querySelector('.topics');
 axios.get('https://lambda-times-backend.herokuapp.com/topics')
 .then((response)=>{
     response.data.topics.forEach((item)=>{
@@ -16,9 +16,9 @@ axios.get('https://lambda-times-backend.herokuapp.com/topics')
 });
 
 function tabsCompon(data){
- const header = document.createElement('div');
- header.classList.add('tab');
- header.textContent = data;
+ const newTabs = document.createElement('div');
+ newTabs.classList.add('tab');
+ newTabs.textContent = topics;
  //DONT FORGET TO RETURN!!!
-return header;
+return newTabs;
 }
