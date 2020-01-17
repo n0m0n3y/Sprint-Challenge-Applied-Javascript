@@ -32,7 +32,8 @@ function cardsCreator(element){
         headline.classList.add('headline');
         author.classList.add('author');
         newImageContainer.classList.add('img-container');
-        
+        //img src
+        newImg.src = element.authorPhoto;
 
         //TextCon
         headline.textContent = element.headline;
@@ -46,6 +47,7 @@ function cardsCreator(element){
         author.appendChild(span);
         cards.appendChild(card);
         //RETURN!!!
+        
         return card;
 }
 
