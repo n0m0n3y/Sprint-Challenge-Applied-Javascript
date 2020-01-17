@@ -17,11 +17,12 @@ function Header() {
 
            //class below
            headerDiv.classList.add('header');
-           span.classList.add('span');
+           span.classList.add('date');
            temp.classList.add('temp');
           // textContents bellow
            span.textContent = 'SMARCH 28, 2019';
-           title.textContent = '98';
+           title.textContent = 'Labmbda Times';
+           temp.textContent ='98°';
          // appending
            headerDiv.appendChild(span);
            headerDiv.appendChild(title);

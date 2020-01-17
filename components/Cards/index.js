@@ -22,7 +22,7 @@ function cardsCreator(element){
     const card = document.createElement('div'),
           headline = document.createElement('div'),
           author = document.createElement('div'),
-          newImageContainer =document.createElement('div'),
+          newImageContainer = document.createElement('div'),
           newImg = document.createElement('img'),
           span = document.createElement('span');
 
@@ -40,11 +40,12 @@ function cardsCreator(element){
         span.textContent =`By ${element.authorName}`;
 
         //appending childs
-        card.appendChild(headline);
+        card.appendChild(headline, author);
         card.appendChild(author);
         card.appendChild(newImageContainer);
         card.appendChild(newImg);
-        author.appendChild(span);
+        newImageContainer.appendChild(newImg);
+        author.appendChild(newImageContainer,span);
         cards.appendChild(card);
         //RETURN!!!
         
@@ -61,6 +62,7 @@ axios.get('https://lambda-times-backend.herokuapp.com/articles').then((response)
           node = response.data.articles.node,
           technology = response.data.articles.technology;
 // iterating 
+
             bootstrap.forEach(element =>{
             const card = cardsCreator(element);
             cards.appendChild(card);
