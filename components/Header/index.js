@@ -17,8 +17,25 @@ function Header() {
 
            //class below
            headerDiv.classList.add('header');
-           
+           span.classList.add('span');
+           temp.classList.add('temp');
           // textContents bellow
+           span.textContent = 'SMARCH 28, 2019';
+           title.textContent = '98';
+         // appending
+           headerDiv.appendChild(span);
+           headerDiv.appendChild(title);
+           headerDiv.appendChild(temp);
 
+           return headerDiv;
 
 }
+
+const header = Header(),
+      headerContainer = document.querySelector('.header-container');
+
+
+
+      
+headerContainer.appendChild(header);
+
