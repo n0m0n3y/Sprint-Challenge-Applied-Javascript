@@ -31,11 +31,10 @@ function Header() {
 
 }
 
-const header = Header(),
-      headerContainer = document.querySelector('.header-container');
+document.querySelector('.header-container').appendChild(Header());
 
 
 
-      
+
 headerContainer.appendChild(header);
 
