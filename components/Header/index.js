@@ -36,5 +36,5 @@ document.querySelector('.header-container').appendChild(Header());
 
 
 
-headerContainer.appendChild(header);
+
 
